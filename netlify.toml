@@ -1,0 +1,10 @@
+[build]
+  functions = "api"
+  targetPort = 4000
+
+[[redirects]]
+  framework = "#custom"
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  targetPort = 4000
